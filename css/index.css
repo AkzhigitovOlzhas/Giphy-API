@@ -31,6 +31,19 @@ body {
     align-items: center;
 }
 
+@media(max-width: 550px) {
+    .header {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        align-items: flex-start;
+    }
+
+    .search-form {
+        margin-top: 10px;
+    }
+}
+
 .header_title {
     text-decoration: none;
     color: white;
@@ -75,7 +88,30 @@ body {
         ". . . ."
         ". . . .";
 }
-.gif-box-border{
+
+@media (max-width:1200px) {
+    .gif-box {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            ". ."
+            ". ."
+            ". ."
+            ". .";
+    }
+}
+
+@media (max-width:700px) {
+    .gif-box {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    }
+}
+
+.gif-box {}
+
+.gif-box-border {
     padding: 10px;
     overflow: auto;
     height: 85vh;
@@ -83,6 +119,7 @@ body {
     border: 3px solid black;
     border-radius: 20px;
 }
+
 *::-webkit-scrollbar {
     width: 16px;
     height: 16px;
@@ -129,7 +166,7 @@ body {
     margin: 10px 5px;
 }
 
-.not-found{
+.not-found {
     text-align: center;
-    color:white;
+    color: white;
 }
