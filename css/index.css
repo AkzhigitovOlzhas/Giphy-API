@@ -9,11 +9,13 @@ body {
     background: url("../img/background.png") no-repeat;
     background-size: 100%;
 }
+
 @media(max-width: 1550px) {
     body {
         background: url("../img/bg2.png") no-repeat;
     }
 }
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -58,17 +60,29 @@ body {
 
 .gif-box {
     padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     overflow: auto;
+    height: 85vh;
+    scroll-behavior: smooth;
     border: 3px solid black;
     border-radius: 20px;
-    scroll-behavior: smooth;
-    height: 85vh;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+        ". . . ."
+        ". . . ."
+        ". . . ."
+        ". . . .";
 }
-
+.gif-box-border{
+    padding: 10px;
+    overflow: auto;
+    height: 85vh;
+    scroll-behavior: smooth;
+    border: 3px solid black;
+    border-radius: 20px;
+}
 *::-webkit-scrollbar {
     width: 16px;
     height: 16px;
@@ -113,4 +127,9 @@ body {
 
 .gif-box__item {
     margin: 10px 5px;
+}
+
+.not-found{
+    text-align: center;
+    color:white;
 }
