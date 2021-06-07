@@ -7,13 +7,7 @@
 
 body {
     background: url("../img/background.png") no-repeat;
-    background-size: 100%;
-}
-
-@media(max-width: 1550px) {
-    body {
-        background: url("../img/bg2.png") no-repeat;
-    }
+    background-size: 100vw 100vh;
 }
 
 .container {
@@ -31,18 +25,7 @@ body {
     align-items: center;
 }
 
-@media(max-width: 550px) {
-    .header {
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-content: center;
-        align-items: flex-start;
-    }
 
-    .search-form {
-        margin-top: 10px;
-    }
-}
 
 .header_title {
     text-decoration: none;
@@ -109,7 +92,6 @@ body {
     }
 }
 
-.gif-box {}
 
 .gif-box-border {
     padding: 10px;
@@ -169,4 +151,21 @@ body {
 .not-found {
     text-align: center;
     color: white;
+}
+
+@media(max-width: 550px) {
+    .header {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        align-items: flex-start;
+    }
+
+    .search-form {
+        margin-top: 10px;
+    }
+
+    .gif-box {
+        height: 75vh;
+    }
 }
